@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CP Change User</title>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+  const url = window.prompt("url：")
+  const newUrl = new URL(url);
+  window.open(`${newUrl.origin}/${newUrl.pathname.split('/')[1]}/logout`)
+  setTimeout(() => {
+    window.location.href = `${newUrl.origin}/${newUrl.pathname.split('/')[1]}/login?redirectUrl=${newUrl.pathname}`
+  }, 2000)
+</script>
+
+</html>
