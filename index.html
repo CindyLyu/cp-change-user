@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CP Change User</title>
-</head>
-<body>
-</body>
-<script type="text/javascript">
-  const currentUrlQueryString = new URLSearchParams(window.location.search)
-  const redirectUrl = currentUrlQueryString.get("url")
+  <head>
+    <title>CP Change User</title>
+  </head>
+  <body>
+  </body>
+  <script type="text/javascript">
+    const currentUrlQueryString = new URLSearchParams(window.location.search)
+    const redirectUrl = currentUrlQueryString.get("url")
 
-  const url = redirectUrl || window.prompt("url：");
-  const formattedUrl = new URL(url);
-  window.open(`${formattedUrl.origin}/${formattedUrl.pathname.split('/')[1]}/logout`)
-  setTimeout(() => {
-    window.location.href = `${formattedUrl.origin}/${formattedUrl.pathname.split('/')[1]}/login?redirectUrl=${formattedUrl.pathname}`
-  }, 2000)
-</script>
+    const url = redirectUrl || window.prompt("url：");
+    const formattedUrl = new URL(url);
+    window.open(`${formattedUrl.origin}/${formattedUrl.pathname.split('/')[1]}/logout`)
+    setTimeout(() => {
+      window.location.href = `${formattedUrl.origin}/${formattedUrl.pathname.split('/')[1]}/login?redirectUrl=${formattedUrl.pathname}`
+    }, 2000)
+  </script>
 </html>
